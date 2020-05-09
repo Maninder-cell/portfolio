@@ -1,3 +1,41 @@
-h1{
-    color: antiquewhite;
+*{
+    margin:0;
+}
+#first_page{
+    position: absolute;
+}
+#upper{
+    height:10vh;
+    width:100vw;
+    background-color: rgb(48, 46, 46);
+    margin-bottom:0.12vh;
+    color:white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+#lower{
+    height:89.88vh;
+    width:100vw;
+    background-color: rgb(37, 35, 35);
+}
+#upper div,img{
+    display: inline-block;
+    line-height: 10vh;
+    vertical-align: middle;
+    width:calc(49.7% - 2vw);
+    text-align: center;
+}
+#right img{
+    width:4%;
+    margin-left:1%;
+    padding-bottom:1%;
+}
+#lower{
+    color:rgba(255, 255, 255, 0.863);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 6em;
+}
+#lower span{
+    display: block;
+    text-align: center;
 }
