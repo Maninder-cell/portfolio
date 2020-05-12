@@ -1,3 +1,9 @@
+html{
+    overflow-x: hidden;
+}
+body{
+    line-height:1.1 !important;
+}
 *{
     margin:0;
 }
@@ -8,20 +14,20 @@
     height:10vh;
     width:100vw;
     background-color: rgb(48, 46, 46);
-    margin-bottom:0.12vh;
     color:white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: x-large;
 }
 #lower{
-    height:89.88vh;
+    height:90vh;
     width:100vw;
     background-color: rgb(37, 35, 35);
     color:rgba(255, 255, 255, 0.863);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 6em;
+    font-size: calc(18vh - 1.5vw);
+    padding-top: 2%;
 }
-#upper div,img{
+#upper div{
     display: inline-block;
     line-height: 10vh;
     vertical-align: middle;
@@ -35,6 +41,7 @@
 }
 #lower div{
     text-align: center;
+    text-shadow: 4px 4px rgb(100, 99, 99);
 }
 #svg_letter{
     margin:1% 20% 0 20%;
@@ -53,6 +60,8 @@ path{
     border: 1px solid white;
     cursor: pointer;
     padding:1% 4% 1% 4%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
 }
 
 /*button animation*/
@@ -92,4 +101,48 @@ path{
     animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+}
+
+@media only screen and (max-width:603px){
+    #lower{
+        font-size: 15vw;
+        padding-top: calc(6% + 1vw);
+    }
+    #lower{
+        height:80vh;
+    }
+    #upper{
+        height:20vh;
+    }
+    #upper div{
+        display: block;
+        width:100%;
+    }
+    #enter_button{
+        font-size: x-large;
+    }
+}
+
+@media only screen and (max-width:900px){
+    #right img{
+        width:6%;
+    }
+}
+
+@media only screen and (max-width:555px){
+    #lower div{
+        margin-bottom: 3%;
+    }
+}
+
+@media only screen and (max-width:424px){
+    #lower div{
+        margin-bottom: calc(5% + 1vw);
+    }
+}
+
+@media only screen and (max-width:380px){
+    #lower div{
+        margin-bottom: calc(5.5% + 4vw);
+    }
 }
