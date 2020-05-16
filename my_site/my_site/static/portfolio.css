@@ -1,14 +1,21 @@
-html{
+/*html{
     overflow-x: hidden;
-}
-body{
+    overflow-y: hidden;
+}*/
+/*body{
     line-height:1.1 !important;
-}
+}*/
 *{
     margin:0;
 }
 #first_page{
     position: absolute;
+    user-select: none;
+    -webkit-user-select: none;
+    z-index:100;
+}
+#layout{
+    z-index:0;
 }
 #upper{
     height:10vh;
@@ -33,6 +40,9 @@ body{
     vertical-align: middle;
     width:calc(49.7% - 2vw);
     text-align: center;
+}
+#left{
+    font-style: italic;
 }
 #right img{
     width:4%;
@@ -105,7 +115,7 @@ path{
 
 @media only screen and (max-width:603px){
     #lower{
-        font-size: 15vw;
+        font-size: calc(15vw - 1vh);
         padding-top: calc(6% + 1vw);
     }
     #lower{
@@ -144,5 +154,97 @@ path{
 @media only screen and (max-width:380px){
     #lower div{
         margin-bottom: calc(5.5% + 4vw);
+    }
+}
+
+header{
+    position: sticky;
+    top:0;
+    z-index:1;
+}
+
+.navbar-collapse{
+    text-align: left !important;
+}
+
+.nav-link:hover{
+    color: black !important;
+}
+
+nav{
+    box-shadow: 7px 3px 7px 1px rgb(80, 77, 77);
+}
+
+#about{
+    margin-top:calc(3% + 1vw);
+}
+
+#image img{
+    width:calc(65% + 1vw);
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+#image{
+    text-align: right;
+    filter: drop-shadow(8px 7px 8px black);
+}
+
+#info{
+    text-align: center;
+}
+
+#info{
+    padding-top:2.7%;
+    padding-bottom:2.5%;
+}
+
+#info p{
+    margin-bottom: 0;
+    font-size:1.5vw;
+}
+
+#info span:first-child{
+    color:dimgray;
+    font-size: 2.5vw;
+}
+
+#info :nth-child(3){
+    font-family: sans-serif;
+    font-weight:bold;
+    font-size: x-large;
+    color: dimgrey;
+    font-size:2vw;
+}
+
+@media only screen and (max-width:575px){
+    #image{
+        text-align: center;
+    }
+    #image img{
+        width:40% !important;
+    }
+    #about{
+        margin-top:5%;
+    }
+    #info span:first-child{
+        font-size: xx-large;
+    }
+    #info :nth-child(3){
+        font-size:larger;
+    }
+    #info p{
+        font-size:medium !important;
+    }
+}
+
+@media only screen and (max-width:830px){
+    #info p{
+        font-size:small;
+    }
+}
+
+@media only screen and (max-width:768px){
+    #image img{
+        width:calc(70% + 3vw);
     }
 }
