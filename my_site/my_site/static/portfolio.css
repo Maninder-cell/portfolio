@@ -5,6 +5,8 @@
 /*body{
     line-height:1.1 !important;
 }*/
+@import url('https://fonts.googleapis.com/css?family=Alef');
+
 *{
     margin:0;
 }
@@ -312,4 +314,201 @@ nav{
 
 #all_skills img{
     width:40%;
+}
+
+#project_title{
+    margin-bottom:1.5%;
+}
+
+#all_projects{
+    background-color:rgb(241, 240, 240);
+    padding: 15px 0 15px 0;
+}
+
+#all_projects .row{
+    margin:0;
+}
+
+.proj{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.proj_data{
+    padding:7px 0 7px 0;
+    border:1px solid gray;
+    border-top:none;
+    border-radius:70px;
+    border-top-left-radius:0;
+    border-top-right-radius:0;
+}
+
+.proj h5{
+    margin:0px 0 5px 0;
+}
+
+.proj p{
+    margin:10px 0 10px 0;
+    color:rgba(0, 0, 0, 0.692);
+}
+
+.proj a xmp{
+    display: inline;
+}
+
+.proj a{
+    text-decoration:none !important;
+}
+
+.proj img{
+    width:100%;
+    border:1px solid gray;
+    border-bottom: none;
+    border-top-right-radius:70px;
+}
+
+.isDisabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+.isDisabled > a {
+    color: currentColor;
+    display: inline-block;  /* For IE11/ MS Edge bug */
+    pointer-events: none;
+    text-decoration: none;
+}
+
+@media only screen and (max-width:991px){
+    .proj:first-child{
+        margin-bottom:40px;
+    }
+    .proj:nth-child(2){
+        margin-bottom:40px;
+    }
+    #all_projects{
+        padding:40px 0 40px 0;
+    }
+    .proj:nth-child(4) p{
+        height:80px !important;
+    }
+    .proj:nth-child(3) p{
+        height:80px !important;
+    }
+}
+
+@media only screen and (max-width:767px){
+    .proj:first-child{
+        margin-bottom:15px;
+    }
+    .proj:nth-child(2){
+        margin-bottom:15px;
+    }
+    #all_projects{
+        padding:15px 0 15px 0;
+    }
+}
+
+@media only screen and (max-width:575px){
+    .proj:nth-child(3){
+        margin-bottom:15px;
+    }
+    .proj:first-child{
+        margin-bottom:40px;
+    }
+    .proj:nth-child(2){
+        margin-bottom:40px;
+    }
+    .proj:nth-child(3){
+        margin-bottom:40px;
+    }
+    #all_projects{
+        padding:40px 0 40px 0;
+    }
+    #projects{
+        margin-top: calc(5% + 2vw);
+    }
+    .proj:nth-child(4) p{
+        height:auto !important;
+    }
+    .proj:nth-child(3) p{
+        height:auto !important;
+    }
+}
+
+@media only screen and (max-width:1250px){
+    .proj:nth-child(4) p{
+        height:72px;
+    }
+}
+
+@media only screen and (max-width:1202px){
+    .proj:nth-child(4) p{
+        height:96px;
+    }
+    .proj:nth-child(3) p{
+        height:96px;
+    }
+}
+
+@media only screen and (max-width:1038px){
+    .proj:nth-child(4) p{
+        height:120px;
+    }
+    .proj:nth-child(3) p{
+        height:120px;
+    }
+}
+
+footer{
+    background-color: rgb(241, 240, 240);
+    margin-top:-1px;
+    font-family: Alef;
+}
+
+#foot{
+    background-color:black;
+    clip-path: polygon(0 15%,40% 15%,50% 0%,60% 15%,100% 15%,100% 100%,0% 100%,0% 10%); 
+    -webkit-clip-path:polygon(0 15%,40% 15%,50% 0%,60% 15%,100% 15%,100% 100%,0% 100%,0% 10%);
+    padding-top:6.5%;
+    padding-bottom: 4%;
+    margin: 0;
+}
+#copyright{
+    text-align:center;
+    padding:10px 0 10px 0;
+    background-color:rgb(29, 27, 27);
+    color:white;
+    margin-top:-1px;
+}
+#social{
+    font-size:xx-large;
+    color:orange;
+    text-align:center;
+}
+#contact{
+    text-align: center;
+    color:dimgray;
+}
+#social-images{
+    margin-top:5%;
+}
+
+#social-images img{
+    width:10%;
+}
+
+#social-images a{
+    margin-left:10%;
+}
+
+#social-images a:first-child{
+    margin:0;
+}
+
+input,textarea{
+    width:71.5%;
+}
+
+input,textarea{
+    display:block;
 }

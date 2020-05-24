@@ -191,10 +191,78 @@
                     <div id="project_title">
                         <span style="display:inline-block;">Projects</span>
                     </div>
+                    <div id="all_projects">
+                        <div class="row justify-content-center">
+                            <div class="proj col-xl-3 col-lg-3 col-md-5 col-sm-6 col-9">
+                                <div id="img" class="hvr-curl-top-left">
+                                    <img src="{% static 'car_game.jpg' %}" alt="car_game_image">
+                                </div>
+                                <div class="proj_data">
+                                    <h5 style="font-weight:bold;">Overdose Racing</h5>
+                                    <p>This is a simple 2d game created with python using PyGame framework.All the game assets created with InkScape</p>
+                                    <a href="https://github.com/Maninder-cell/Car-Race-Game" target="_blank"><xmp></get the code></xmp></a>
+                                </div>
+                            </div>
+                            <div class="proj col-xl-3 col-lg-3 col-md-5 col-sm-6 col-9">
+                                <div id="img" class="hvr-curl-top-left">
+                                    <img style="background-color:lightsteelblue;" src="{% static 'crossandzero.png' %}" alt="cross and zero">
+                                </div>
+                                <div class="proj_data">
+                                    <h5 style="font-weight:bold;">Tic Tac Toe</h5>
+                                    <p>This is a simple 2d game created with python using PyGame framework.All the game assets created with InkScape</p>
+                                    <a href="https://github.com/Maninder-cell/cross-and-zero" target="_blank"><xmp></get the code></xmp></a>
+                                </div>
+                            </div>
+                            <div class="proj col-xl-3 col-lg-3 col-md-5 col-sm-6 col-9">
+                                <div id="img" class="hvr-curl-top-left">
+                                    <img src="{% static 'eminem.png' %}" alt="Eminem">
+                                </div>
+                                <div class="proj_data">
+                                    <h5 style="font-weight:bold;">Eminem Music</h5>
+                                    <p>This is a simple website created with html, css and javascipt.The Songs are present on Google Drive.</p>
+                                    <a href="https://maninder-cell.github.io/Music-site-Eminem-/main.html" target="_blank">View Website</a>
+                                </div>
+                            </div>
+                            <div class="proj col-xl-3 col-lg-3 col-md-5 col-sm-6 col-9">
+                                <div id="img" class="hvr-curl-top-left">
+                                    <img src="{% static 'image10.png' %}" alt="QnA site image">
+                                </div>
+                                <div class="proj_data">
+                                    <h5 style="font-weight:bold;">QnA Website</h5>
+                                    <p>I'm working on my new project QnA website.This web-app will use Django as backend and PostgreSQL for database</p>
+                                    <span class="isDisabled"><a href="#">Currently Ongoing</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <footer></footer>
+        <footer>
+            <div id="foot" class="container-fluid row justify-content-between">
+                <div id="social" class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-8">
+                   - Find Me -
+                   <div id="social-images">
+                        <a href="#"><img class="hvr-bounce-in" src="https://img.icons8.com/color/480/000000/stackoverflow.png" alt="stack overflow" title="stack overflow"/></a>
+                        <a href="#"><img class="hvr-bounce-in" src="https://img.icons8.com/nolan/480/github.png"/ alt="github" title="Github"></a>
+                        <a href="#"><img class="hvr-bounce-in" src="https://img.icons8.com/fluent/480/000000/instagram-new.png"/ alt="instagram" title="Instagram"></a>
+                   </div>
+                </div>
+                <div id="contact" class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-8">
+                    <p><b>Hire Me</b>, or want to start a project with me.</p>
+                    <div id="contact-form">
+                        <form action="">
+                            <input type="text">
+                            <input type="email">
+                            <textarea name="message" id="message" rows="5"></textarea>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="copyright">
+                <span>&#169; 2020 Maninder Singh</span>
+            </div>
+        </footer>
     </div>
     <script>
         var timeline=anime.timeline({
