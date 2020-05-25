@@ -469,8 +469,8 @@ footer{
     background-color:black;
     clip-path: polygon(0 15%,40% 15%,50% 0%,60% 15%,100% 15%,100% 100%,0% 100%,0% 10%); 
     -webkit-clip-path:polygon(0 15%,40% 15%,50% 0%,60% 15%,100% 15%,100% 100%,0% 100%,0% 10%);
-    padding-top:6.5%;
-    padding-bottom: 4%;
+    padding-top:88px;
+    padding-bottom: 30px;
     margin: 0;
 }
 #copyright{
@@ -484,17 +484,19 @@ footer{
     font-size:xx-large;
     color:orange;
     text-align:center;
+    padding-top:66px;
 }
 #contact{
-    text-align: center;
+    text-align: right;
     color:dimgray;
+    padding-right:2% !important;
 }
 #social-images{
     margin-top:5%;
 }
 
 #social-images img{
-    width:10%;
+    width:3.5vw;
 }
 
 #social-images a{
@@ -506,9 +508,57 @@ footer{
 }
 
 input,textarea{
-    width:71.5%;
+    width:90%;
+    margin-left:10% !important;
+}
+
+input:focus,textarea:focus{
+    color:white;
+}
+
+input{
+    height:31px;
 }
 
 input,textarea{
     display:block;
+    margin-bottom:2px !important;
+    border: none;
+    outline:none;
+    background-color: rgb(68, 67, 67);
+    color:white;
+    padding-left:1.5%;
 }
+
+form{
+    text-align:right;
+}
+
+button{
+    border:2px solid #2098D1;
+    color:white;
+    border-image:none;
+    outline:none !important;
+    background-color: black;
+    margin-top:1.7px !important;
+    padding:3px 18px 3px 18px;
+}
+
+#contact p{
+    margin-bottom: 10px;
+    font-size:calc(0.26rem + 1vw);
+}
+
+@media only screen and (max-width:1199px){
+    #contact{
+        padding-right:0.5% !important;
+    }
+}
+
+@media only screen and (max-width:850px){
+    #social{
+        font-size:x-large;
+        padding-top:78px;
+    }
+}
+

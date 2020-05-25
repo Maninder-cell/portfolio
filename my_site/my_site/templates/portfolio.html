@@ -240,27 +240,29 @@
         </section>
         <footer>
             <div id="foot" class="container-fluid row justify-content-between">
-                <div id="social" class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-8">
-                   - Find Me -
+                <div id="social" class="col-xl-4 col-lg-4 col-md-4 col-sm-8 col-8">
+                   <span>- Find Me -</span>
                    <div id="social-images">
                         <a href="#"><img class="hvr-bounce-in" src="https://img.icons8.com/color/480/000000/stackoverflow.png" alt="stack overflow" title="stack overflow"/></a>
-                        <a href="#"><img class="hvr-bounce-in" src="https://img.icons8.com/nolan/480/github.png"/ alt="github" title="Github"></a>
-                        <a href="#"><img class="hvr-bounce-in" src="https://img.icons8.com/fluent/480/000000/instagram-new.png"/ alt="instagram" title="Instagram"></a>
+                        <a href="#"><img class="hvr-bounce-in" src="https://img.icons8.com/nolan/480/github.png" alt="github" title="Github"></a>
+                        <a href="#"><img class="hvr-bounce-in" src="https://img.icons8.com/fluent/480/000000/instagram-new.png" alt="instagram" title="Instagram"></a>
+                        <a href="#"><img style="background-color:black;" class="hvr-bounce-in" src="{% static 'sololearn.png' %}" alt="Sololearn" title="Sololearn"></a>
                    </div>
                 </div>
-                <div id="contact" class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-8">
-                    <p><b>Hire Me</b>, or want to start a project with me.</p>
+                <div id="contact" class="col-xl-4 col-lg-5 col-md-5 col-sm-8 col-8">
+                    <p><b style="color:orange;">Hire Me,</b> or want to start a project with me.</p>
                     <div id="contact-form">
                         <form action="">
-                            <input type="text">
-                            <input type="email">
-                            <textarea name="message" id="message" rows="5"></textarea>
+                            <input required placeholder="Your Name" type="text">
+                            <input required placeholder="Your Email" type="email">
+                            <textarea required placeholder="Your Message" name="message" id="message" rows="5"></textarea>
+                            <button class="hvr-bounce-to-right"type="submit">Send Message</button>
                         </form>
                     </div>
                 </div>
             </div>
             <div id="copyright">
-                <span>&#169; 2020 Maninder Singh</span>
+                <span><span style="color:orange;">&#169; 2020</span> Maninder Singh</span>
             </div>
         </footer>
     </div>
