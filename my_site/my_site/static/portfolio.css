@@ -7,6 +7,10 @@
 }*/
 @import url('https://fonts.googleapis.com/css?family=Alef');
 
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     margin:0;
 }
@@ -162,9 +166,11 @@ path{
 header{
     position: sticky;
     top:0;
-    z-index:1;
+    z-index:2;
 }
-
+section{
+    z-index:2;
+}
 .navbar-collapse{
     text-align: left !important;
 }
@@ -175,6 +181,7 @@ header{
 
 nav{
     box-shadow: 7px 3px 7px 1px rgb(80, 77, 77);
+    border-bottom:3px solid skyblue;
 }
 
 #about{
@@ -288,6 +295,9 @@ nav{
     }
     #all_skills p{
         font-size:calc(4% + 2.5vw) !important;
+    }
+    #social-images img{
+        width:7vw !important;
     }
 }
 
@@ -457,11 +467,14 @@ nav{
     .proj:nth-child(3) p{
         height:120px;
     }
+    #contact p{
+        font-size:calc(0.32rem + 1vw) !important;
+    }
 }
 
 footer{
     background-color: rgb(241, 240, 240);
-    margin-top:-1px;
+    margin-top:-40px;
     font-family: Alef;
 }
 
@@ -484,7 +497,6 @@ footer{
     font-size:xx-large;
     color:orange;
     text-align:center;
-    padding-top:66px;
 }
 #contact{
     text-align: right;
@@ -534,7 +546,7 @@ form{
     text-align:right;
 }
 
-button{
+#sub_button{
     border:2px solid #2098D1;
     color:white;
     border-image:none;
@@ -558,7 +570,80 @@ button{
 @media only screen and (max-width:850px){
     #social{
         font-size:x-large;
-        padding-top:78px;
     }
 }
 
+
+@media only screen and (max-width:767px){
+    #social-images img{
+        width:5.5vw;
+    }
+    #contact p{
+        font-size:calc(0.40rem + 2vw) !important;
+    }
+    input,textarea{
+        width:100%;
+        margin-left:0 !important;
+    }
+    #contact{
+        padding-right:15px !important;
+        text-align:center;
+    }
+    #foot{
+        padding-top:76px;
+    }
+}
+
+@media only screen and (max-width:730px){
+    #contact{
+        padding:0 !important;
+    }
+    #foot{
+        clip-path: polygon(0 15%,30% 15%,50% 0%,70% 15%,100% 15%,100% 100%,0% 100%,0% 10%); 
+        -webkit-clip-path:polygon(0 15%,30% 15%,50% 0%,70% 15%,100% 15%,100% 100%,0% 100%,0% 10%);
+    }
+}
+
+#up_button{
+    display:inline-block;
+    position: relative;
+    left:48%;
+    right:0;
+    top:5vw;
+    bottom:0;
+    z-index:1;
+    text-align:center;
+}
+
+#up_button img{
+    width:4vw;
+}
+
+@media only screen and (max-width:730px){
+    #up_button{
+        top:60px;
+        left:46.8%;
+    }
+    #up_button img{
+        width:6.5vw;
+    }
+}
+
+@media only screen and (max-width:767px){
+    #up_button{
+        top:53px;
+    }
+    header{
+        opacity:0.95;
+    }
+    li a{
+        color:rgba(0, 0, 0, 0.85) !important;
+    }
+}
+
+.tooltip-inner {
+    background-color: blue !important;
+}
+.tooltip.bs-tooltip-bottom .arrow:before {
+        border-bottom-color:blue !important;
+}
