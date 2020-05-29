@@ -248,20 +248,21 @@
                 <div id="social" class="col-xl-4 col-lg-4 col-md-4 col-sm-8 col-8 my-sm-4 my-4 my-md-0 my-lg-0 my-xl-0">
                    <span>- Find Me -</span>
                    <div id="social-images">
-                        <a href="#"><img data-toggle="tooltip" data-placement="bottom" class="hvr-bounce-in" src="https://img.icons8.com/color/480/000000/stackoverflow.png" alt="stack overflow" title="stack overflow"/></a>
-                        <a href="#"><img data-toggle="tooltip" data-placement="bottom" class="hvr-bounce-in" src="https://img.icons8.com/nolan/480/github.png" alt="github" title="Github"></a>
-                        <a href="#"><img data-toggle="tooltip" data-placement="bottom" class="hvr-bounce-in" src="https://img.icons8.com/fluent/480/000000/instagram-new.png" alt="instagram" title="Instagram"></a>
-                        <a href="#"><img data-toggle="tooltip" data-placement="bottom" style="background-color:black;" class="hvr-bounce-in" src="{% static 'sololearn.png' %}" alt="Sololearn" title="Sololearn"></a>
+                        <a href="https://stackoverflow.com/users/13220425/maninder-singh?tab=profile" target="_blank"><img data-toggle="tooltip" data-placement="bottom" class="hvr-bounce-in" src="https://img.icons8.com/color/480/000000/stackoverflow.png" alt="stack overflow" title="stack overflow"/></a>
+                        <a href="https://github.com/Maninder-cell" target="_blank"><img data-toggle="tooltip" data-placement="bottom" class="hvr-bounce-in" src="https://img.icons8.com/nolan/480/github.png" alt="github" title="Github"></a>
+                        <a href="https://www.instagram.com/py_maninder/" target="_blank"><img data-toggle="tooltip" data-placement="bottom" class="hvr-bounce-in" src="https://img.icons8.com/fluent/480/000000/instagram-new.png" alt="instagram" title="Instagram"></a>
+                        <a href="https://www.sololearn.com/Profile/7856596" target="_blank"><img data-toggle="tooltip" data-placement="bottom" style="background-color:black;" class="hvr-bounce-in" src="{% static 'sololearn.png' %}" alt="Sololearn" title="Sololearn"></a>
                    </div>
                 </div>
                 <div id="contact" class="col-xl-4 col-lg-5 col-md-5 col-sm-8 col-8">
                     <p><b style="color:orange;">Hire Me,</b> or want to start a project with me.</p>
                     <div id="contact-form">
-                        <form action="">
-                            <input required placeholder="Your Name" type="text">
-                            <input required placeholder="Your Email" type="email">
+                        <form id="cont_form" action="{% url 'send_message' %}" method="POST">
+                            {% csrf_token %}
+                            <input required placeholder="Your Name" type="text" name="name">
+                            <input required placeholder="Your Email" type="email" name="email">
                             <textarea required placeholder="Your Message" name="message" id="message" rows="5"></textarea>
-                            <button id="sub_button"  class="hvr-bounce-to-right"type="submit">Send Message</button>
+                            <button id="sub_button"  class="hvr-bounce-to-right" type="submit">Send Message</button>
                         </form>
                     </div>
                 </div>
@@ -271,6 +272,7 @@
             </div>
         </footer>
     </div>
+    <div style="display:none;" id="load"></div>
     <script>
         var timeline=anime.timeline({
             easing: 'easeOutExpo',
@@ -311,6 +313,23 @@
                 {scaleY:1,duration:100}
             ],
             endDelay:1500
+        });
+
+        var loading = anime({
+            targets:"#load",
+            easing:"linear",
+            loop:true,
+            autoplay:false,
+            keyframes:[
+                {translateY:-220,duration:150},
+                {translateY:0,scaleY:1.9,duration:150},
+                {scaleY:1,duration:100}
+            ],
+            endDelay:500,
+            begin:function k(){
+                document.getElementById("load").style.display = "block";
+                document.getElementById("layout").style.opacity = "0.3"
+            }
         });
 
         anime({
@@ -388,6 +407,23 @@
             });
 
             $('[data-toggle="tooltip"]').tooltip();
+
+            $("#cont_form").submit(function(){
+                loading.play();
+                $.ajax({
+                    url:$(this).attr("action"),
+                    method:$(this).attr("method"),
+                    data:$(this).serialize(),
+                    success:function(data){
+                        document.getElementById("load").style.display = "none";
+                        loading.pause();
+                        document.getElementById("layout").style.opacity = "1"
+                        alert("Message has been sent succesfully");
+                        $("#cont_form")[0].reset();
+                    }
+                });
+                return false;
+            });
         });
     </script>
 </body>
