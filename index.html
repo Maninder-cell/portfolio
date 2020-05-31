@@ -1,12 +1,12 @@
-{% load static %}
 <!DOCTYPE html>
 <html id="main" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'portfolio.css' %}">
-    <link rel="stylesheet" href="{% static 'hover.css' %}">
+    <link rel="shortcut icon" type="image/png" href="static/bitmap.png"/>
+    <title>Maninder-Singh</title>
+    <link rel="stylesheet" href="static/css/portfolio.css">
+    <link rel="stylesheet" href="static/css/hover.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <script
@@ -16,9 +16,35 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_NsLxJL92noZVwdDTpO1Ml");
+       })();
+    </script>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('cont_form').addEventListener('submit', function(event) {
+                loading.restart();
+                event.preventDefault();
+                emailjs.sendForm('gmail', 'template_53Ec48vp', this)
+                .then(function(response) {
+                        loading.pause();
+                        document.getElementById("load").style.display = "none";
+                        document.getElementById("layout").style.opacity = "1"
+                        $("#cont_form")[0].reset();
+                        alert("Message has been sent succesfully");
+                }, function(error) {
+                        alert('FAILED... Try Again', error);
+                });
+            });
+        }
+    </script>
 </head>
 <body>
-    <div style="display:none;" id="first_page">
+    <div id="first_page">
         <div id="upper">
             <div id="left">Maninder Singh</div>
             <div id="right">
@@ -60,7 +86,7 @@
             <button class="hvr-buzz" id="enter_button" type="button">View Portfolio</button>
         </div>
     </div>
-    <div id="layout">
+    <div style="display:none;" id="layout">
         <header>
             <nav class="navbar navbar-expand-md navbar-light bg-light">
                 <div id="jkl" class="container">
@@ -102,7 +128,7 @@
             <div class="container-fluid">
                 <div class="row" id="about">
                     <div id="image" class="col-sm-4">
-                        <img class="hvr-bounce-out" src="{% static 'image823.png' %}" alt="Hoddie Man">
+                        <img class="hvr-bounce-out" src="static/image823.png" alt="Hoddie Man">
                     </div>
                     <div id="info" class="col-sm-8">
                         <span>/Coder</span><br>
@@ -199,7 +225,7 @@
                         <div class="row justify-content-center">
                             <div class="proj col-xl-3 col-lg-3 col-md-5 col-sm-6 col-9">
                                 <div id="img" class="hvr-curl-top-left">
-                                    <img src="{% static 'car_game.jpg' %}" alt="car_game_image">
+                                    <img src="static/car_game.jpg" alt="car_game_image">
                                 </div>
                                 <div class="proj_data">
                                     <h5 style="font-weight:bold;">Overdose Racing</h5>
@@ -209,7 +235,7 @@
                             </div>
                             <div class="proj col-xl-3 col-lg-3 col-md-5 col-sm-6 col-9">
                                 <div id="img" class="hvr-curl-top-left">
-                                    <img style="background-color:lightsteelblue;" src="{% static 'crossandzero.png' %}" alt="cross and zero">
+                                    <img style="background-color:lightsteelblue;" src="static/crossandzero.png" alt="cross and zero">
                                 </div>
                                 <div class="proj_data">
                                     <h5 style="font-weight:bold;">Tic Tac Toe</h5>
@@ -219,17 +245,17 @@
                             </div>
                             <div class="proj col-xl-3 col-lg-3 col-md-5 col-sm-6 col-9">
                                 <div id="img" class="hvr-curl-top-left">
-                                    <img src="{% static 'eminem.png' %}" alt="Eminem">
+                                    <img src="static/eminem.png" alt="Eminem">
                                 </div>
                                 <div class="proj_data">
                                     <h5 style="font-weight:bold;">Eminem Music</h5>
                                     <p>This is a simple website created with html, css and javascipt.The Songs are present on Google Drive.</p>
-                                    <a href="https://maninder-cell.github.io/Music-site-Eminem-/main.html" target="_blank">View Website</a>
+                                    <a href="https://maninder-cell.github.io/Music-site-Eminem-/" target="_blank">View Website</a>
                                 </div>
                             </div>
                             <div class="proj col-xl-3 col-lg-3 col-md-5 col-sm-6 col-9">
                                 <div id="img" class="hvr-curl-top-left">
-                                    <img src="{% static 'image10.png' %}" alt="QnA site image">
+                                    <img src="static/image10.png" alt="QnA site image">
                                 </div>
                                 <div class="proj_data">
                                     <h5 style="font-weight:bold;">QnA Website</h5>
@@ -243,7 +269,7 @@
             </div>
         </section>
         <footer>
-            <div class="o-scroll-up hvr-sink" id="up_button"><a href="#"><img src="{% static 'up.png' %}" alt="up_button"></a></div>           
+            <div class="o-scroll-up hvr-sink" id="up_button"><a href="#"><img src="static/up.png" alt="up_button"></a></div>           
             <div id="foot" class="container-fluid row justify-content-center justify-content-sm-center justify-content-md-between justify-content-lg-between justify-content-xl-between align-items-center">
                 <div id="social" class="col-xl-4 col-lg-4 col-md-4 col-sm-8 col-8 my-sm-4 my-4 my-md-0 my-lg-0 my-xl-0">
                    <span>- Find Me -</span>
@@ -251,14 +277,13 @@
                         <a href="https://stackoverflow.com/users/13220425/maninder-singh?tab=profile" target="_blank"><img data-toggle="tooltip" data-placement="bottom" class="hvr-bounce-in" src="https://img.icons8.com/color/480/000000/stackoverflow.png" alt="stack overflow" title="stack overflow"/></a>
                         <a href="https://github.com/Maninder-cell" target="_blank"><img data-toggle="tooltip" data-placement="bottom" class="hvr-bounce-in" src="https://img.icons8.com/nolan/480/github.png" alt="github" title="Github"></a>
                         <a href="https://www.instagram.com/py_maninder/" target="_blank"><img data-toggle="tooltip" data-placement="bottom" class="hvr-bounce-in" src="https://img.icons8.com/fluent/480/000000/instagram-new.png" alt="instagram" title="Instagram"></a>
-                        <a href="https://www.sololearn.com/Profile/7856596" target="_blank"><img data-toggle="tooltip" data-placement="bottom" style="background-color:black;" class="hvr-bounce-in" src="{% static 'sololearn.png' %}" alt="Sololearn" title="Sololearn"></a>
+                        <a href="https://www.sololearn.com/Profile/7856596" target="_blank"><img data-toggle="tooltip" data-placement="bottom" style="background-color:black;" class="hvr-bounce-in" src="static/sololearn.png" alt="Sololearn" title="Sololearn"></a>
                    </div>
                 </div>
                 <div id="contact" class="col-xl-4 col-lg-5 col-md-5 col-sm-8 col-8">
                     <p><b style="color:orange;">Hire Me,</b> or want to start a project with me.</p>
                     <div id="contact-form">
-                        <form id="cont_form" action="{% url 'send_message' %}" method="POST">
-                            {% csrf_token %}
+                        <form id="cont_form" method="POST">
                             <input required placeholder="Your Name" type="text" name="name">
                             <input required placeholder="Your Email" type="email" name="email">
                             <textarea required placeholder="Your Message" name="message" id="message" rows="5"></textarea>
@@ -272,7 +297,7 @@
             </div>
         </footer>
     </div>
-    <div style="display:none;" id="load"></div>
+    <div id="load"></div>
     <script>
         var timeline=anime.timeline({
             easing: 'easeOutExpo',
@@ -407,23 +432,6 @@
             });
 
             $('[data-toggle="tooltip"]').tooltip();
-
-            $("#cont_form").submit(function(){
-                loading.play();
-                $.ajax({
-                    url:$(this).attr("action"),
-                    method:$(this).attr("method"),
-                    data:$(this).serialize(),
-                    success:function(data){
-                        document.getElementById("load").style.display = "none";
-                        loading.pause();
-                        document.getElementById("layout").style.opacity = "1"
-                        alert("Message has been sent succesfully");
-                        $("#cont_form")[0].reset();
-                    }
-                });
-                return false;
-            });
         });
     </script>
 </body>
