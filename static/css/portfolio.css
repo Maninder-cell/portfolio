@@ -143,6 +143,9 @@ section{
     color: black !important;
 }
 
+.img-load {
+    background : transparent url("https://wallpapercave.com/wp/wp6444183.jpg") center no-repeat;
+}
 nav{
     -webkit-box-shadow: 7px 3px 7px 1px rgb(80, 77, 77);
     box-shadow: 7px 3px 7px 1px rgb(80, 77, 77);
