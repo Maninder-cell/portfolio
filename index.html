@@ -50,6 +50,8 @@
                         alert("Message has been sent succesfully");
                 }, function(error) {
                         alert('FAILED... Try Again', error);
+                        document.getElementById("load").style.display = "none";
+                        document.getElementById("layout").style.opacity = "1"
                 });
             });
         }
