@@ -29,11 +29,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <scripttype="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script type="text/javascript">
-       (function(){
-          emailjs.init("user_NsLxJL92noZVwdDTpO1Ml");
-       })();
+        (function() {
+            emailjs.init("user_NsLxJL92noZVwdDTpO1Ml");
+        })();
     </script>
 
     <script type="text/javascript">
@@ -41,7 +41,7 @@
             document.getElementById('cont_form').addEventListener('submit', function(event) {
                 loading.restart();
                 event.preventDefault();
-                emailjs.sendForm('gmail', 'template_53Ec48vp', this)
+                emailjs.send("service_fchlbgd","template_53Ec48vp",this)
                 .then(function(response) {
                         loading.pause();
                         document.getElementById("load").style.display = "none";
