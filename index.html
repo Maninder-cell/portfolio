@@ -39,9 +39,10 @@
     <script type="text/javascript">
         window.onload = function() {
             document.getElementById('cont_form').addEventListener('submit', function(event) {
+                console.log(this)
                 loading.restart();
                 event.preventDefault();
-                emailjs.send("service_fchlbgd","template_53Ec48vp",this)
+                emailjs.sendForm("service_fchlbgd","template_53Ec48vp",this)
                 .then(function(response) {
                         loading.pause();
                         document.getElementById("load").style.display = "none";
