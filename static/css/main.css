@@ -1,0 +1,32 @@
+.main_div{
+    height: auto !important;
+    padding: 0.5%;
+}
+
+.desk-anim .menu{
+    width: fit-content;
+    margin: 0 auto !important;
+}
+
+.desktop-menu{
+    margin-top: 0 !important;
+}
+
+.bars{
+    margin: 0 !important;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+@media only screen and (max-width: 767px){
+    .mobile-menu{
+        display: block;
+    }
+
+    .desktop-menu{
+        display: none;
+    }
+
+}
